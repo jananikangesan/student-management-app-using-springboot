@@ -31,6 +31,7 @@ public class StudentServiceImpl implements StudentService{
 		Boolean findstudent=studentRepository.existsById(id);
 		
 		if(findstudent) {
+			student.setId(id);
 			return studentRepository.save(student);
 		}
 
